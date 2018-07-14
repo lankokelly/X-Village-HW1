@@ -26,8 +26,7 @@ class Matrix:
     def display(self):
         """Display the content in the matrix"""
         pass
-#精簡版
-import random
+
 m=4
 n=2
 k=m
