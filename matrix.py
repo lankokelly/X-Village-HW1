@@ -49,11 +49,6 @@ class Matrix:
         print("========== A * B ==========")
         multimatrix = deepcopy(self) 
         #multimatrix.list = [ [0] * m.n ]
-        print(type(self.list))
-        multimatrix = [[]]
-        #print(type(multimatrix.list.pop(2)))
-        #aaa=multimatrix.list
-        #k=self.m
         #while (k>1): #create a m*n matrix default value=0
         #    aaa.append( [k] * m.n )  
         #    k -= 1
@@ -98,6 +93,7 @@ B = Matrix ( b_rows , b_cols ) #create a instance obj B by class Matrix
 B.display()
 C = A.add(B) #C is a matrix obj, but return None if size of A is not equal to B
 while (C): #if C is not None, display it
+    print(type(C)) #<class '__main__.Matrix'>
     C.display()
     break
 D = A.sub(B) #D is a matrix obj, but return None if size of A is not equal to B
