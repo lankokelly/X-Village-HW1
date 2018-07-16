@@ -65,8 +65,14 @@ class Matrix:
         return multimatrix
         pass
     
-    def transpose(self):
-        """return a new Matrix object after transpose"""
+    def transpose(self): #return a new Matrix object after transpose
+        print("===== the transpose of A * B =====")
+        tempmatrix = deepcopy(self)
+        transmatrix = deepcopy (self)
+        for i in range (0,self.m):
+            for j in range(0,self.n):
+                transmatrix.list[j][i] = tempmatrix.list[i][j]
+        return transmatrix
         pass
     
     def display(self):
@@ -100,8 +106,11 @@ D = A.sub(B) #D is a matrix obj, but return None if size of A is not equal to B
 while (D): #if D is None, display it
     D.display()
     break
-
 E = A.mul(B)
 while (E): #if D is None, display it
     E.display()
+    break
+T = E.transpose()
+while (T):
+    T.display()
     break
